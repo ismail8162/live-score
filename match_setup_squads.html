@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Match Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#ffdad6",
+                      "surface-container-low": "#191c1e",
+                      "on-tertiary-fixed": "#0d1c2f",
+                      "error": "#ffb4ab",
+                      "secondary-fixed-dim": "#4ae176",
+                      "tertiary": "#b9c7e0",
+                      "on-secondary-container": "#004119",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary": "#283044",
+                      "on-error": "#690005",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "inverse-primary": "#565e74",
+                      "secondary-fixed": "#6bff8f",
+                      "background": "#101415",
+                      "inverse-surface": "#e0e3e5",
+                      "on-primary-container": "#798098",
+                      "tertiary-fixed-dim": "#b9c7e0",
+                      "on-secondary-fixed": "#002109",
+                      "tertiary-fixed": "#d5e3fd",
+                      "on-secondary": "#003915",
+                      "secondary": "#4ae176",
+                      "tertiary-container": "#09182a",
+                      "on-primary-fixed": "#131b2e",
+                      "on-tertiary": "#233144",
+                      "outline": "#909097",
+                      "surface-container": "#1d2022",
+                      "surface": "#101415",
+                      "surface-variant": "#323537",
+                      "on-secondary-fixed-variant": "#005321",
+                      "on-tertiary-fixed-variant": "#3a485c",
+                      "surface-container-lowest": "#0b0f10",
+                      "outline-variant": "#45464d",
+                      "on-background": "#e0e3e5",
+                      "on-surface": "#e0e3e5",
+                      "surface-bright": "#363a3b",
+                      "primary": "#bec6e0",
+                      "on-tertiary-container": "#738298",
+                      "primary-fixed": "#dae2fd",
+                      "on-surface-variant": "#c6c6cd",
+                      "surface-container-high": "#272a2c",
+                      "secondary-container": "#00b954",
+                      "primary-container": "#0f172a",
+                      "surface-container-highest": "#323537",
+                      "surface-dim": "#101415",
+                      "inverse-on-surface": "#2d3133",
+                      "surface-tint": "#bec6e0",
+                      "error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "lg": "24px",
+                      "sm": "8px",
+                      "xl": "48px",
+                      "unit": "4px",
+                      "md": "16px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "stats-number": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "stats-number": ["20px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface border-b border-outline-variant shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full z-50 fixed top-0 bg-surface-container-high dark:bg-surface-container-high">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary">sports_cricket</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tight">Match Center</span>
+</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-label-bold text-label-bold text-secondary dark:text-secondary flex items-center gap-xs hover:bg-surface-variant/50 transition-colors px-4 py-2 rounded-full active:scale-95 duration-150 bg-secondary-container/20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
+                Setup
+            </a>
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-surface-variant flex items-center gap-xs hover:bg-surface-variant/50 transition-colors px-4 py-2 rounded-full active:scale-95 duration-150 hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                Scorecard
+            </a>
+<a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-surface-variant flex items-center gap-xs hover:bg-surface-variant/50 transition-colors px-4 py-2 rounded-full active:scale-95 duration-150 hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined">layers</span>
+                Overlay
+            </a>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-variant/50 p-2 rounded-full transition-colors active:scale-95 duration-150 md:hidden">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full flex flex-col gap-lg">
+<div class="flex justify-between items-center mb-md">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Match Setup</h1>
+<div class="flex items-center gap-sm bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">Live Ready</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+<!-- General Match Details -->
+<div class="lg:col-span-4 flex flex-col gap-md">
+<div class="bg-surface-container rounded-xl shadow-lg border border-outline-variant/30 overflow-hidden relative group p-lg h-full">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined">tune</span>
+                        Configuration
+                    </h2>
+<div class="space-y-4">
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Tournament / Series</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant rounded p-3 text-on-surface font-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-colors" type="text" value="Apex Premier League 2024"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Venue</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant rounded p-3 text-on-surface font-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-colors" type="text" value="Grand Stadium, Metropolis"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Match Overs</label>
+<select class="w-full bg-surface-container-highest border border-outline-variant rounded p-3 text-on-surface font-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-colors appearance-none">
+<option selected="" value="20">20 Overs</option>
+<option value="10">10 Overs</option>
+<option value="8">8 Overs</option>
+<option value="5">5 Overs</option>
+</select>
+</div>
+<div class="pt-sm">
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-md">Toss Details</label>
+<div class="bg-surface-container-lowest p-md rounded border border-outline-variant flex flex-col gap-sm">
+<div>
+<span class="text-sm text-on-surface-variant mb-1 block">Toss Winner</span>
+<select class="w-full bg-surface-container border border-outline-variant rounded p-2 text-on-surface font-body-md focus:border-secondary outline-none">
+<option>Select Team</option>
+<option selected="">Team A (Knights)</option>
+<option>Team B (Titans)</option>
+</select>
+</div>
+<div>
+<span class="text-sm text-on-surface-variant mb-1 block">Decision</span>
+<div class="flex gap-2">
+<button class="flex-1 bg-secondary text-on-secondary font-label-bold text-label-bold py-2 rounded text-center transition-colors">Bat</button>
+<button class="flex-1 bg-surface-container hover:bg-surface-variant border border-outline-variant text-on-surface font-label-bold text-label-bold py-2 rounded text-center transition-colors">Bowl</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Setup -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Team A -->
+<div class="bg-surface-container rounded-xl shadow-lg border border-outline-variant/30 overflow-hidden relative p-lg">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-md text-headline-md text-tertiary flex items-center gap-sm">
+<span class="material-symbols-outlined">shield</span>
+                            Team A
+                        </h2>
+</div>
+<div class="space-y-4 mb-lg">
+<div class="flex gap-sm">
+<div class="flex-1">
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Team Name</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant rounded p-2 text-on-surface font-body-md focus:border-tertiary outline-none" type="text" value="Neon Knights"/>
+</div>
+<div class="w-24">
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Code</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant rounded p-2 text-on-surface font-body-md text-center uppercase focus:border-tertiary outline-none" type="text" value="NNK"/>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-md">
+<div class="flex justify-between items-center mb-sm">
+<h3 class="font-label-bold text-label-bold text-on-surface-variant">Playing XI</h3>
+<button class="text-tertiary hover:text-white text-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">add</span> Add
+                            </button>
+</div>
+<div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+<!-- Player Rows -->
+<script>
+                                for(let i=1; i<=11; i++) {
+                                    document.write(`
+                                    <div class="flex items-center gap-2 bg-surface-container-lowest p-2 rounded border border-outline-variant/50 hover:border-tertiary/50 transition-colors">
+                                        <span class="text-on-surface-variant text-xs w-4">${i}</span>
+                                        <input type="text" value="Player ${i}" class="flex-1 bg-transparent border-none p-1 text-sm text-on-surface focus:ring-0 outline-none">
+                                        <div class="flex gap-1">
+                                            <button class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center text-[10px] ${i===1 ? 'bg-tertiary text-on-tertiary border-tertiary font-bold' : 'text-on-surface-variant hover:bg-surface-variant'}" title="Captain">C</button>
+                                            <button class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center text-[10px] ${i===2 ? 'bg-surface-variant text-on-surface border-outline font-bold' : 'text-on-surface-variant hover:bg-surface-variant'}" title="Wicket Keeper">W</button>
+                                        </div>
+                                    </div>
+                                    `);
+                                }
+                            </script>
+</div>
+</div>
+</div>
+<!-- Team B -->
+<div class="bg-surface-container rounded-xl shadow-lg border border-outline-variant/30 overflow-hidden relative p-lg">
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-error"></div>
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-md text-headline-md text-error flex items-center gap-sm">
+<span class="material-symbols-outlined">shield</span>
+                            Team B
+                        </h2>
+</div>
+<div class="space-y-4 mb-lg">
+<div class="flex gap-sm">
+<div class="flex-1">
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Team Name</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant rounded p-2 text-on-surface font-body-md focus:border-error outline-none" type="text" value="Crimson Titans"/>
+</div>
+<div class="w-24">
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Code</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant rounded p-2 text-on-surface font-body-md text-center uppercase focus:border-error outline-none" type="text" value="TIT"/>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-md">
+<div class="flex justify-between items-center mb-sm">
+<h3 class="font-label-bold text-label-bold text-on-surface-variant">Playing XI</h3>
+<button class="text-error hover:text-white text-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">add</span> Add
+                            </button>
+</div>
+<div class="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+<!-- Player Rows -->
+<script>
+                                for(let i=1; i<=11; i++) {
+                                    document.write(`
+                                    <div class="flex items-center gap-2 bg-surface-container-lowest p-2 rounded border border-outline-variant/50 hover:border-error/50 transition-colors">
+                                        <span class="text-on-surface-variant text-xs w-4">${i}</span>
+                                        <input type="text" value="Opponent ${i}" class="flex-1 bg-transparent border-none p-1 text-sm text-on-surface focus:ring-0 outline-none">
+                                        <div class="flex gap-1">
+                                            <button class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center text-[10px] ${i===3 ? 'bg-error text-on-error border-error font-bold' : 'text-on-surface-variant hover:bg-surface-variant'}" title="Captain">C</button>
+                                            <button class="w-6 h-6 rounded-full border border-outline-variant flex items-center justify-center text-[10px] ${i===4 ? 'bg-surface-variant text-on-surface border-outline font-bold' : 'text-on-surface-variant hover:bg-surface-variant'}" title="Wicket Keeper">W</button>
+                                        </div>
+                                    </div>
+                                    `);
+                                }
+                            </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex justify-end items-center mt-lg border-t border-outline-variant pt-lg gap-md">
+<button class="font-label-bold text-label-bold px-6 py-3 rounded text-on-surface-variant hover:bg-surface-variant transition-colors border border-outline-variant">
+                Save Draft
+            </button>
+<button class="font-label-bold text-label-bold px-8 py-3 rounded bg-secondary text-on-secondary hover:bg-secondary-fixed transition-colors flex items-center gap-sm shadow-[0_0_15px_rgba(74,225,118,0.3)] hover:shadow-[0_0_20px_rgba(74,225,118,0.5)]">
+<span class="material-symbols-outlined">sports_score</span>
+                START MATCH
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-surface-container dark:bg-surface-container border-t border-outline-variant shadow-lg fixed bottom-0 w-full rounded-t-xl bg-surface-container-high dark:bg-surface-container-high fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-4">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary-container text-on-secondary-container dark:text-on-secondary-container rounded-full px-5 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
+<span class="font-label-bold text-label-bold mt-1 text-[10px]">Setup</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-secondary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-bold text-label-bold mt-1 text-[10px]">Scorecard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1 hover:text-secondary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="font-label-bold text-label-bold mt-1 text-[10px]">Overlay</span>
+</a>
+</nav>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #45464d;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #909097;
+        }
+    </style>
+</body></html>
